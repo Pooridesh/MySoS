@@ -6,53 +6,100 @@
     android:layout_height="match_parent"
     tools:context="meepoohbc.mysos.MainActivity">
 
+    <ImageView
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_siam"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
     <LinearLayout
-        android:padding="@dimen/padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         android:gravity="center_horizontal"
         android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:textColor="@color/textColorPrimary"
-            android:textSize="@dimen/h1"
-            android:text="@string/title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        android:padding="@dimen/padding">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/h1" />
 
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_centerVertical="true"
-        android:gravity="center_horizontal"
-        android:layout_margin="@dimen/margin"
-        android:orientation="vertical"
+        android:padding="@dimen/padding"
+        android:background="#640e0e0e"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/margin"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
         <ImageView
 
-            android:src="@drawable/logo_siam"
             android:layout_width="@dimen/icon"
-            android:layout_height="@dimen/icon" />
+            android:layout_height="@dimen/icon"
+            android:src="@drawable/logo_siam" />
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"></LinearLayout>
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_user" />
+
+            <EditText
+                android:textColorHint="@color/colorPrimaryLight"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/user" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_pass" />
+
+            <EditText
+                android:textColorHint="@color/colorPrimaryLight"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/pass" />
+
+        </LinearLayout>
+
+        <TextView
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/h2"
+            android:text="สมัครสมาชิก"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 
     <Button
-        android:textColor="@color/textColorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:background="@color/colorPrimary"
         android:text="@string/login"
-        android:layout_alignParentBottom="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
+        android:textColor="@color/textColorPrimary" />
 
 
 </RelativeLayout>
