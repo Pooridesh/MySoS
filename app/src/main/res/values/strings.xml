@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My SoS</string>
+    <string name="title">มหาวิทยาลัยสยาม</string>
+    <string name="login">เข้าสู่ระบบ</string>
+</resources>
