@@ -30,12 +30,14 @@
     </RelativeLayout>
 
     <ScrollView
+        android:background="@color/colorPrimaryLight"
         android:layout_above="@+id/btnRegister"
         android:layout_below="@+id/relTop"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:background="#b4ffffff"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
