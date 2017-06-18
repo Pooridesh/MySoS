@@ -4,4 +4,6 @@
     <string name="login">เข้าสู่ระบบ</string>
     <string name="user">ชื่อผู้ใช้</string>
     <string name="pass">รหัสผ่าน</string>
+    <string name="register">สมัครสมาชิก</string>
+    <string name="name">ชื่อ-นามสกุล</string>
 </resources>
