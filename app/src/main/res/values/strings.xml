@@ -14,5 +14,6 @@
     <string name="MessageUserFalse">ไม่มีชื่อผู้ใช้นี้ อยู่ในระบบ</string>
     <string name="titlePassFalse">รหัสผ่านไม่ถูกต้อง</string>
     <string name="MessagePassFalse">รหัสผ่านใม่ถูกต้อง กรุณากรอกใหม่อีกครั้ง</string>
+    <string name="title_activity_maps">Map</string>
 
 </resources>

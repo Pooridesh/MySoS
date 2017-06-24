@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -93,6 +94,12 @@ public class MainActivity extends AppCompatActivity {
             if (b) {
                 myAlert.MyDialog(getResources().getString(R.string.titleUserFalse),
                         getResources().getString(R.string.MessageUserFalse));
+            } else if (passString.equals(loginStrings1[3])) {
+                Toast.makeText(MainActivity.this,"ยินดีต้อนรับ คุณ "+loginStrings1[1],
+                        Toast.LENGTH_SHORT).show();
+            } else {
+                myAlert.MyDialog(getResources().getString(R.string.titlePassFalse),
+                        getResources().getString(R.string.MessagePassFalse));
             }
 
         } catch (Exception e) {
