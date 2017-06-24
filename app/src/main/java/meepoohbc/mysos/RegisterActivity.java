@@ -2,6 +2,7 @@ package meepoohbc.mysos;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -56,6 +57,7 @@ public class RegisterActivity extends AppCompatActivity
                 else
                 {
                       //No Space ไม่มีชองว่าง
+                    uploadValueToServer();
                 }
 
 
@@ -64,11 +66,34 @@ public class RegisterActivity extends AppCompatActivity
         });
     }
 
+    private void uploadValueToServer() {
+
+        try {
+
+            PostDataToServer postDataToServer = new PostDataToServer(RegisterActivity.this);
+            postDataToServer.execute(nameString,userString,passString,"http://androidthai.in.th/siam/addDataPooh.php");
+            if (Boolean.parseBoolean(postDataToServer.get()))
+            {
+                finish();
+            }
+            else
+            {
+                MyAlert myAlert = new MyAlert(RegisterActivity.this);
+                myAlert.MyDialog("ไม่สามารถอัปโหลด","โปรดลองอีกครั้ง");
+
+            }
+
+        } catch (Exception e) {
+            Log.d("SiamOne", "e Upload >>>" + e.toString());
+        }
+
+    }
+
     private void backController() {
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();;
+                finish();
             }
         });
     }
