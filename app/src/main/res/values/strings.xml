@@ -1,9 +1,18 @@
 <resources>
-    <string name="app_name">My SoS</string>
-    <string name="title">มหาวิทยาลัยสยาม</string>
+    <string name="app_name">MY SoS</string>
+    <string name="title">ระบบขอความช่วยเหลือฉุกเฉิน</string>
     <string name="login">เข้าสู่ระบบ</string>
     <string name="user">ชื่อผู้ใช้</string>
     <string name="pass">รหัสผ่าน</string>
     <string name="register">สมัครสมาชิก</string>
     <string name="name">ชื่อ-นามสกุล</string>
+
+    <!--For Dialog-->
+    <string name="titleHaveSpace">กรอกข้อมูลไม่ครบถ้วน</string>
+    <string name="MessageHaveSpace">กรุณากรอกข้อมูลให้ครบถ้วน</string>
+    <string name="titleUserFalse">ชื่อผู้ใช้ไม่ถูกต้อง</string>
+    <string name="MessageUserFalse">ไม่มีชื่อผู้ใช้นี้ อยู่ในระบบ</string>
+    <string name="titlePassFalse">รหัสผ่านไม่ถูกต้อง</string>
+    <string name="MessagePassFalse">รหัสผ่านใม่ถูกต้อง กรุณากรอกใหม่อีกครั้ง</string>
+
 </resources>
