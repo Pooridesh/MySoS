@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
                 //get value from edit text
                 userString = userEditText.getText().toString().trim();
                 passString = passEditText.getText().toString();
+                Log.d("SiamV1", "Password มีค่า ==" + passString);
 
                 //check space
                 if (userString.length() == 0 || passString.length() == 0) {
@@ -74,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
             String[] strings = new String[]{"id", "Name", "User", "Pass"};
 
             String[] loginStrings1 = new String[strings.length];
-            for (int i =0; i<jsonArray.length();i++) {
+            for (int i =0; i<jsonArray.length();i+=1) {
 
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
 
@@ -91,12 +92,19 @@ public class MainActivity extends AppCompatActivity {
 
                 }// if
             }// for ใหญ่ นะเว้ย
+
             if (b) {
                 myAlert.MyDialog(getResources().getString(R.string.titleUserFalse),
                         getResources().getString(R.string.MessageUserFalse));
+
             } else if (passString.equals(loginStrings1[3])) {
                 Toast.makeText(MainActivity.this,"ยินดีต้อนรับ คุณ "+loginStrings1[1],
                         Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(MainActivity.this, MapsActivity.class);
+                intent.putExtra("Login", loginStrings1);
+                startActivity(intent);
+                finish();
             } else {
                 myAlert.MyDialog(getResources().getString(R.string.titlePassFalse),
                         getResources().getString(R.string.MessagePassFalse));
